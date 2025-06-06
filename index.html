@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 1.5 Years!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="background-effects"></div>
+
+  <div class="container">
+    <div class="heart">💗</div>
+    <h1>happy 1.5 years, my love!</h1>
+    <p class="intro">
+      I made this tiny love app just for you. You are the softest part of my days and the calm in my chaos.
+    </p>
+    <div class="player">
+      <div class="song-info">
+        <div class="title">love. - wave to earth</div>
+        <div class="subtitle">Now playing</div>
+      </div>
+      <div class="waveform">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <button onclick="toggleAudio()" class="play-button">▶️</button>
+      <audio id="loveAudio" src="./audio/wave to earth - love. (Official Lyric Video).mp3"></audio>
+      <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
+
+    <div class="slideshow">
+      <img src="./images/photo1.jpg" class="slide active" />
+      <img src="./images/photo2.jpeg" class="slide" />
+      <img src="./images/photo3.jpeg" class="slide" />
+      <img src="./images/photo4.jpeg" class="slide" />
+      <img src="./images/photo5.jpeg" class="slide" />
+      <img src="./images/photo6.jpg" class="slide" />
+      <img src="./images/photo7.jpg" class="slide" />
+      <img src="./images/photo8.jpg" class="slide" />
+      <img src="./images/photo9.jpg" class="slide" />
+      <img src="./images/photo10.jpg" class="slide" />
+    </div>
+
+    <button onclick="showMessage()">💌 Tap Me</button>
+    <div class="hidden-message" id="secret">
+      Every moment with you is a gentle forever. I love you — today, tomorrow, always 🌷
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+    // Soft sparkles and hearts
+    const sparkleCount = 15;
+    const heartCount = 6;
+    const body = document.body;
+
+    for (let i = 0; i < sparkleCount; i++) {
+      const s = document.createElement("div");
+      s.className = "sparkle";
+      s.style.left = Math.random() * 100 + "vw";
+      s.style.animationDuration = 6 + Math.random() * 5 + "s";
+      body.appendChild(s);
+    }
+
+    for (let i = 0; i < heartCount; i++) {
+      const h = document.createElement("div");
+      h.className = "floating-heart";
+      h.textContent = "💖";
+      h.style.left = Math.random() * 100 + "vw";
+      h.style.animationDuration = 10 + Math.random() * 10 + "s";
+      body.appendChild(h);
+    }
+  </script>
+  </script>
+</body>
+
+</html>
